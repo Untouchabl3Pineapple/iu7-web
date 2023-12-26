@@ -1,0 +1,8 @@
+global:
+  scrape_interval: 1s # Интервал сбора метрик
+  evaluation_interval: 1s
+
+scrape_configs:
+  - job_name: 'Tractor APP' # Имя для вашего приложения
+    static_configs:
+      - targets: ['docker.for.mac.localhost:5000'] # Адрес вашего приложения, где оно предоставляет метрики
